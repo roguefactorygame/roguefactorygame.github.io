@@ -95,3 +95,32 @@ body {
 h1 {
   font-family: "PixelFont";
 }
+
+a,
+p {
+  font-family: "M5X7";
+  font-size: 32px;
+}
+
+a {
+  --pico-underline: #d15802;
+  --pico-primary: #ffd96e;
+}
+
+a:hover {
+  --pico-primary-hover-underline: #d15802;
+  --pico-primary-hover: #d15802;
+}
+
+article {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+article h2 {
+  text-align: center;
+  font-family: "PixelFont";
+}
