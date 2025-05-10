@@ -7,7 +7,7 @@ import styles from "./RecipeGraph.module.css";
 
 export default function RecipeGraph({ ...props }) {
   const [element, setElement] = React.useState(null);
-  const graph = React.useMemo(() => toChart(recipes), []);
+  const { mermaid } = React.useMemo(() => toChart(recipes), []);
   const panzoomRef = React.useRef(null);
 
   React.useEffect(() => {
@@ -22,10 +22,27 @@ export default function RecipeGraph({ ...props }) {
     }
   };
 
+  const onClick = (name) => {
+    console.log("click", name);
+  };
+
+  const onMouseOver = (name) => {
+    console.log("hover", name);
+  };
+
+  const onMouseOut = (name) => {
+    console.log("leave", name);
+  };
+
   return (
     <div {...props} className={styles.RecipeGraph}>
       <div ref={setElement} onWheel={onWheel}>
-        <Mermaid definition={graph} />
+        <Mermaid
+          definition={mermaid}
+          onClick={onClick}
+          onMouseOut={onMouseOut}
+          onMouseOver={onMouseOver}
+        />
       </div>
     </div>
   );
