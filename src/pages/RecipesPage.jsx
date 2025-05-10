@@ -1,10 +1,10 @@
+import { PageContent } from "../components/PageContent";
 import RecipeGraph from "../components/RecipeGraph";
-import PageContainer from "../components/PageContainer";
 
 export default function RecipesPage() {
   return (
-    <PageContainer>
+    <PageContent>
       <RecipeGraph />
-    </PageContainer>
+    </PageContent>
   );
 }

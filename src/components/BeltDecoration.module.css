@@ -1,0 +1,7 @@
+.BeltDecoration {
+  background-image: url("../../public/blue_belt_straight_full_arrows-6.png");
+  background-repeat: repeat-y;
+  height: 100vh;
+  width: 16px;
+  position: fixed;
+}

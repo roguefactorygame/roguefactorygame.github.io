@@ -1,3 +1,12 @@
+@keyframes title-animation {
+  0% {
+    filter: grayscale(0);
+  }
+  100% {
+    filter: grayscale(1) contrast(0) brightness(2.5) opacity(0.5);
+  }
+}
+
 .PageContainer {
   display: flex;
   flex-direction: column;
@@ -12,8 +21,19 @@
 }
 
 .PageContainer img {
-  height: 4rem;
+  height: 6rem;
   object-fit: scale-down;
   margin-bottom: 8px;
-  filter: drop-shadow(1px 2px 8px rgba(0, 0, 0, 0.5));
+  animation: title-animation 1000ms ease-in-out 2000ms 1 forwards;
+}
+
+.PageContainer footer {
+  margin-top: 8px;
+  font-family: "M5X7";
+  text-align: center;
+  font-size: 24px;
+}
+
+.PageContainer footer strong {
+  color: white;
 }

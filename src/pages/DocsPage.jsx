@@ -1,7 +1,7 @@
 import React from "react";
 import Markdown from "react-markdown";
-import PageContainer from "../components/PageContainer";
 import { useParams } from "react-router-dom";
+import { PageContent } from "../components/PageContent";
 
 export default function DocsPage() {
   const { directory, file } = useParams();
@@ -14,10 +14,10 @@ export default function DocsPage() {
   }, [directory, file]);
 
   return (
-    <PageContainer>
+    <PageContent>
       <article>
         <Markdown>{content}</Markdown>
       </article>
-    </PageContainer>
+    </PageContent>
   );
 }
