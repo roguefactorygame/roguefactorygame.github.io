@@ -1,0 +1,66 @@
+@font-face {
+  font-family: "M5X7";
+  src: url("../public/m5x7.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "PixelFont";
+  src: url("../public/FREEPIXEL.TTF") format("truetype");
+}
+
+[id*="T0_"] rect {
+  fill: #fb92ff !important;
+  color: #fb92ff !important;
+}
+
+[id*="TC_"] rect {
+  fill: #f4aecb !important;
+  color: #f4aecb !important;
+}
+
+[id*="T1_"] rect {
+  fill: #ffe6ea !important;
+  color: #ffe6ea !important;
+}
+
+[id*="TA_"] rect {
+  fill: #ffe900 !important;
+  color: #ffe900 !important;
+}
+
+[id*="T2_"] rect {
+  fill: rgba(255, 165.75, 89.25, 1) !important;
+  color: rgba(255, 165.75, 89.25, 1) !important;
+}
+
+[id*="T4_"] rect {
+  fill: rgba(67.065, 255, 132.09, 1) !important;
+  color: rgba(67.065, 255, 132.09, 1) !important;
+}
+
+[id*="TS_"] rect {
+  fill: #9fe1f7 !important;
+  color: #9fe1f7 !important;
+}
+
+[id*="T8_"] rect {
+  fill: rgba(62.985, 198.9, 255, 1) !important;
+  color: rgba(62.985, 198.9, 255, 1) !important;
+}
+
+[id*="T16_"] rect {
+  fill: rgba(249.9, 219.29999999999998, 102, 1) !important;
+  color: rgba(249.9, 219.29999999999998, 102, 1) !important;
+}
+
+.nodeLabel p,
+.edgeLabel p {
+  color: #111 !important;
+  fill: #111 !important;
+  font-family: "M5X7";
+  font-size: large;
+}
+
+h1 {
+  font-family: "PixelFont";
+}
