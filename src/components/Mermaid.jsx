@@ -13,6 +13,8 @@ export default function Mermaid({
   onClick,
   onMouseOver,
   onMouseOut,
+  selection,
+  highlight,
 }) {
   const id = React.useId();
   const [className] = React.useState(() => `mermaid-${ID++}`);
@@ -32,6 +34,27 @@ export default function Mermaid({
       }
     });
   }, [definition, id]);
+
+  React.useEffect(() => {
+    const nodes = document.querySelectorAll('[id^="flowchart-T"]');
+    const set = new Set(highlight);
+    for (const node of nodes) {
+      const label = node.querySelector("p");
+      const text = label.innerText;
+      if (set.size === 0) {
+        node.style.opacity = 1;
+        continue;
+      }
+
+      if (text === selection) {
+        node.style.opacity = 1.0;
+      } else if (set.has(text)) {
+        node.style.opacity = 0.75;
+      } else {
+        node.style.opacity = 0.25;
+      }
+    }
+  }, [selection, ...(highlight ?? [])]);
 
   return <div className={className}>{definition}</div>;
 }

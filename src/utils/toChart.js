@@ -5,6 +5,18 @@ export function toChart(recipes) {
     recipes.map((recipe) => [recipe.name, recipe])
   );
 
+  const ingredientMap = recipes.reduce((acc, recipe) => {
+    for (const ingredient of recipe.ingredients) {
+      if (ingredient.name in acc) {
+        acc[ingredient.name].push(recipe.name);
+      } else {
+        acc[ingredient.name] = [recipe.name];
+      }
+    }
+
+    return acc;
+  }, {});
+
   const id = (name) => {
     let type = recipeMap[name]?.stats?.type ?? 0;
     switch (name) {
@@ -29,6 +41,7 @@ export function toChart(recipes) {
 
   return {
     recipeMap,
+    ingredientMap,
     mermaid: `
 ---
 config:
