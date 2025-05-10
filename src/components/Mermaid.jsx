@@ -8,13 +8,28 @@ mermaid.initialize({
 });
 
 let ID = 0;
-export default function Mermaid({ definition }) {
+export default function Mermaid({
+  definition,
+  onClick,
+  onMouseOver,
+  onMouseOut,
+}) {
   const id = React.useId();
   const [className] = React.useState(() => `mermaid-${ID++}`);
 
   React.useEffect(() => {
-    mermaid.run({
-      nodes: document.querySelectorAll('[class^="mermaid"]'),
+    Promise.resolve(
+      mermaid.run({
+        nodes: document.querySelectorAll('[class^="mermaid"]'),
+      })
+    ).then(() => {
+      const nodes = document.querySelectorAll('[id^="flowchart-T"]');
+      for (const node of nodes) {
+        const label = node.querySelector("p");
+        node.addEventListener("click", () => onClick(label.innerText));
+        node.addEventListener("mouseover", () => onMouseOver(label.innerText));
+        node.addEventListener("mouseout", () => onMouseOut(label.innerText));
+      }
     });
   }, [definition, id]);
 

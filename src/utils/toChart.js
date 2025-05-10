@@ -27,7 +27,9 @@ export function toChart(recipes) {
     return _idCache[key];
   };
 
-  return `
+  return {
+    recipeMap,
+    mermaid: `
 ---
 config:
     theme: base
@@ -54,5 +56,6 @@ flowchart TD
           }${id(recipe.name)}`
       )
     )
-    .join("\n")}`;
+    .join("\n")}`,
+  };
 }
