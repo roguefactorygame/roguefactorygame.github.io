@@ -1,32 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
+    />
     <title>Rogue Factory</title>
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-</head>
-
-<body>
-    <noscript> You need to enable JavaScript to run this app. </noscript>
-    <div id="app">{{ message }}</div>
-    <script>
-        const { createApp, ref } = Vue
-
-        createApp({
-            setup() {
-                const message = ref('Rogue factory')
-                return {
-                    message
-                }
-            }
-        }).mount('#app')
-    </script>
-    <script type="module">
-        import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs";
-        mermaid.initialize({ startOnLoad: true });
-    </script>
-</body>
-
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>

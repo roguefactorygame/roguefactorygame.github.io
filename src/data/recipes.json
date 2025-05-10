@@ -1,0 +1,664 @@
+[
+  {
+    "craftingTime": 2,
+    "description": "Piercing crossbow bolt that targets a random enemy",
+    "ingredients": [{ "name": "Arrow", "quantity": 1 }],
+    "name": "Crossbow bolt",
+    "stats": {
+      "critChance": 0.3,
+      "critMult": 1.25,
+      "damage": 9,
+      "knockback": 1.2,
+      "type": 1
+    }
+  },
+  {
+    "craftingTime": 8,
+    "description": "A boomerang is thrown",
+    "ingredients": [{ "name": "Crossbow bolt", "quantity": 1 }],
+    "name": "Boomerang",
+    "stats": {
+      "critChance": 0.1,
+      "critMult": 1.1,
+      "damage": 10,
+      "knockback": 1,
+      "type": 1
+    }
+  },
+  {
+    "craftingTime": 2,
+    "description": "The ground shakes and pushes enemies away from you",
+    "ingredients": [{ "name": "Seismic shockwave", "quantity": 1 }],
+    "name": "Earthquake",
+    "stats": {
+      "critChance": 0,
+      "critMult": 1,
+      "damage": 1,
+      "knockback": 6,
+      "type": 1
+    }
+  },
+  {
+    "craftingTime": 2,
+    "description": "A ball of fire that targets a random enemy",
+    "ingredients": [{ "name": "Anima", "quantity": 1 }],
+    "name": "Fire ball",
+    "stats": {
+      "critChance": 0.1,
+      "critMult": 1.25,
+      "damage": 4,
+      "knockback": 1,
+      "type": 2
+    }
+  },
+  {
+    "craftingTime": 4,
+    "description": "Burst of fire that orbits around you",
+    "ingredients": [{ "name": "Fire ball", "quantity": 1 }],
+    "name": "Fire blast",
+    "stats": {
+      "critChance": 0.15,
+      "critMult": 1.125,
+      "damage": 11,
+      "knockback": 1.5,
+      "type": 2
+    }
+  },
+  {
+    "craftingTime": 12,
+    "description": "A flame shoots out from you instantly setting any enemy in your path on fire",
+    "ingredients": [{ "name": "Fire blast", "quantity": 1 }],
+    "name": "Flamethrower",
+    "stats": {
+      "critChance": 0,
+      "critMult": 1,
+      "damage": 1,
+      "knockback": 1,
+      "type": 2
+    }
+  },
+  {
+    "craftingTime": 8,
+    "description": "A beam of ice ricochets freezing enemies it passes through",
+    "ingredients": [{ "name": "Ice shards", "quantity": 1 }],
+    "name": "Freeze beam",
+    "stats": {
+      "critChance": 0.2,
+      "critMult": 1.2,
+      "damage": 9,
+      "knockback": 2,
+      "type": 8
+    }
+  },
+  {
+    "craftingTime": 2,
+    "description": "A ball of ice that bursts into shards",
+    "ingredients": [{ "name": "Icicle", "quantity": 1 }],
+    "name": "Ice shards",
+    "stats": {
+      "critChance": 0,
+      "critMult": 1,
+      "damage": 8,
+      "knockback": 1.2,
+      "type": 8
+    }
+  },
+  {
+    "craftingTime": 2,
+    "description": "A sharp icicle is launched in the direction you're moving",
+    "ingredients": [{ "name": "Spiritus", "quantity": 1 }],
+    "name": "Icicle",
+    "stats": {
+      "critChance": 0.25,
+      "critMult": 1.2,
+      "damage": 12,
+      "knockback": 1,
+      "type": 8
+    }
+  },
+  {
+    "craftingTime": 2,
+    "description": "A large spark of electricity launches in a random direction stunning any enemies in its path",
+    "ingredients": [{ "name": "Ball lightning", "quantity": 1 }],
+    "name": "Megaspark",
+    "stats": {
+      "critChance": 0,
+      "critMult": 1,
+      "damage": 30,
+      "knockback": 1.5,
+      "type": 16
+    }
+  },
+  {
+    "craftingTime": 4,
+    "description": "A ball of electricity that orbits around you",
+    "ingredients": [{ "name": "Electric bolt", "quantity": 1 }],
+    "name": "Ball lightning",
+    "stats": {
+      "critChance": 0.1,
+      "critMult": 1.2,
+      "damage": 20,
+      "knockback": 1.3,
+      "type": 16
+    }
+  },
+  {
+    "craftingTime": 3,
+    "description": "A flammable cloud of gas that poisons nearby enemies",
+    "ingredients": [{ "name": "Poison bubble", "quantity": 1 }],
+    "name": "Gas cloud",
+    "stats": {
+      "critChance": 0,
+      "critMult": 1,
+      "damage": 2,
+      "knockback": 2.5,
+      "type": 4
+    }
+  },
+  {
+    "craftingTime": 8,
+    "description": "Rain falls from the sky soaking enemies",
+    "ingredients": [{ "name": "Bubble", "quantity": 1 }],
+    "name": "Rain",
+    "stats": {
+      "critChance": 0,
+      "critMult": 1,
+      "damage": 3,
+      "knockback": 0.00000000000208165,
+      "type": 32
+    }
+  },
+  {
+    "craftingTime": 2,
+    "description": "A wave of energy pushes enemies away",
+    "ingredients": [{ "name": "Force field", "quantity": 1 }],
+    "name": "Force wave",
+    "stats": {
+      "critChance": 0,
+      "critMult": 1,
+      "damage": 10,
+      "knockback": 4,
+      "type": 1
+    }
+  },
+  {
+    "craftingTime": 2,
+    "description": "Piercing arrow that targets the closest enemy",
+    "ingredients": [{ "name": "Corpus", "quantity": 1 }],
+    "name": "Arrow",
+    "stats": {
+      "critChance": 0.2,
+      "critMult": 1.1,
+      "damage": 4,
+      "knockback": 1,
+      "type": 1
+    }
+  },
+  {
+    "craftingTime": 10,
+    "description": "Highly flammable acid rain falls from the sky",
+    "ingredients": [
+      { "name": "Rain", "quantity": 1 },
+      { "name": "Poison bubble", "quantity": 1 }
+    ],
+    "name": "Acid rain",
+    "stats": {
+      "critChance": 0,
+      "critMult": 1,
+      "damage": 2,
+      "knockback": 1,
+      "type": 4
+    }
+  },
+  {
+    "craftingTime": 8,
+    "description": "A blast of snow freezes and pushes enemies away",
+    "ingredients": [
+      { "name": "Icicle", "quantity": 1 },
+      { "name": "Ice shards", "quantity": 1 }
+    ],
+    "name": "Blizzard",
+    "stats": {
+      "critChance": 0,
+      "critMult": 1,
+      "damage": 4,
+      "knockback": 2,
+      "type": 8
+    }
+  },
+  {
+    "craftingTime": 4,
+    "description": "Explosive arrow that detonates on impact",
+    "ingredients": [
+      { "name": "Arrow", "quantity": 1 },
+      { "name": "Bomb", "quantity": 1 }
+    ],
+    "name": "Bomb arrow",
+    "stats": {
+      "critChance": 0,
+      "critMult": 1,
+      "damage": 5,
+      "knockback": 1.4,
+      "type": 1
+    }
+  },
+  {
+    "craftingTime": 10,
+    "description": "Explosive with a long fuse that detonates immediately if hit by fire",
+    "ingredients": [
+      { "name": "Corpus", "quantity": 1 },
+      { "name": "Anima", "quantity": 1 }
+    ],
+    "name": "Bomb",
+    "stats": {
+      "critChance": 0,
+      "critMult": 1,
+      "damage": 45,
+      "knockback": 1.5,
+      "type": 1
+    }
+  },
+  {
+    "craftingTime": 2,
+    "description": "A bubble of water floats towards enemies doing little damage but soaking them with water",
+    "ingredients": [
+      { "name": "Fire ball", "quantity": 1 },
+      { "name": "Icicle", "quantity": 1 }
+    ],
+    "name": "Bubble",
+    "stats": {
+      "critChance": 0,
+      "critMult": 1,
+      "damage": 3,
+      "knockback": 0.00000000000208165,
+      "type": 32
+    }
+  },
+  {
+    "craftingTime": 4,
+    "description": "A blast of energy targets the nearest enemy to you",
+    "ingredients": [
+      { "name": "Corpus", "quantity": 1 },
+      { "name": "Spiritus", "quantity": 1 }
+    ],
+    "name": "Seismic shockwave",
+    "stats": {
+      "critChance": 0,
+      "critMult": 1,
+      "damage": 10,
+      "knockback": 1.6,
+      "type": 1
+    }
+  },
+  {
+    "craftingTime": 2,
+    "description": "Arrow that ignites enemies on impact",
+    "ingredients": [
+      { "name": "Arrow", "quantity": 1 },
+      { "name": "Fire ball", "quantity": 1 }
+    ],
+    "name": "Fire arrow",
+    "stats": {
+      "critChance": 0.3,
+      "critMult": 1.25,
+      "damage": 16,
+      "knockback": 1,
+      "type": 2
+    }
+  },
+  {
+    "craftingTime": 8,
+    "description": "Rapidly shoots fireballs in a rotating spiral",
+    "ingredients": [
+      { "name": "Fire ball", "quantity": 1 },
+      { "name": "Fire blast", "quantity": 1 }
+    ],
+    "name": "Fire barrage",
+    "stats": {
+      "critChance": 0.2,
+      "critMult": 1.2,
+      "damage": 6,
+      "knockback": 3,
+      "type": 2
+    }
+  },
+  {
+    "craftingTime": 2,
+    "description": "A column of fire that instantly burns all enemies in its path",
+    "ingredients": [{ "name": "Fire ball", "quantity": 2 }],
+    "name": "Fire column",
+    "stats": {
+      "critChance": 0,
+      "critMult": 1,
+      "damage": 5,
+      "knockback": 1.25,
+      "type": 2
+    }
+  },
+  {
+    "craftingTime": 3,
+    "description": "A circle of energy that pushes enemies away from you",
+    "ingredients": [
+      { "name": "Spiritus", "quantity": 1 },
+      { "name": "Anima", "quantity": 1 }
+    ],
+    "name": "Force field",
+    "stats": {
+      "critChance": 0,
+      "critMult": 1,
+      "damage": 1,
+      "knockback": 2.25,
+      "type": 1
+    }
+  },
+  {
+    "craftingTime": 5,
+    "description": "Turns the ground around you into ice and freezes any enemies standing on top of it",
+    "ingredients": [
+      { "name": "Ice shards", "quantity": 1 },
+      { "name": "Corpus", "quantity": 1 }
+    ],
+    "name": "Frozen ground",
+    "stats": {
+      "critChance": 0,
+      "critMult": 1,
+      "damage": 3,
+      "knockback": 1,
+      "type": 8
+    }
+  },
+  {
+    "craftingTime": 2,
+    "description": "A volley of icicles shoots in every direction",
+    "ingredients": [{ "name": "Icicle", "quantity": 2 }],
+    "name": "Ice volley",
+    "stats": {
+      "critChance": 0.2,
+      "critMult": 1.1,
+      "damage": 10,
+      "knockback": 1,
+      "type": 8
+    }
+  },
+  {
+    "craftingTime": 6,
+    "description": "A highly conductive spike falls from the sky",
+    "ingredients": [
+      { "name": "Crossbow bolt", "quantity": 1 },
+      { "name": "Corpus", "quantity": 1 }
+    ],
+    "name": "Javelin",
+    "stats": {
+      "critChance": 0.1,
+      "critMult": 9,
+      "damage": 10,
+      "knockback": 0.00000000000208165,
+      "type": 1
+    }
+  },
+  {
+    "craftingTime": 3,
+    "description": "A bolt of electricity fires in a random direction, has a chance to ricochet on impact",
+    "ingredients": [
+      { "name": "Fire ball", "quantity": 1 },
+      { "name": "Spiritus", "quantity": 1 }
+    ],
+    "name": "Electric bolt",
+    "stats": {
+      "critChance": 0.1,
+      "critMult": 1.1,
+      "damage": 16,
+      "knockback": 1.1,
+      "type": 16
+    }
+  },
+  {
+    "craftingTime": 2,
+    "description": "A ball of electric charge floats out launching lightning bolts in random directions",
+    "ingredients": [{ "name": "Electric bolt", "quantity": 2 }],
+    "name": "Static charge",
+    "stats": {
+      "critChance": 0,
+      "critMult": 1,
+      "damage": 2,
+      "knockback": 2,
+      "type": 16
+    }
+  },
+  {
+    "craftingTime": 10,
+    "description": "Lightning that strikes a random enemy",
+    "ingredients": [
+      { "name": "Ball lightning", "quantity": 1 },
+      { "name": "Corpus", "quantity": 1 }
+    ],
+    "name": "Lightning strike",
+    "stats": {
+      "critChance": 0.2,
+      "critMult": 1.2,
+      "damage": 60,
+      "knockback": 1.2,
+      "type": 16
+    }
+  },
+  {
+    "craftingTime": 2,
+    "description": "A meteor falls from the sky",
+    "ingredients": [
+      { "name": "Fire blast", "quantity": 1 },
+      { "name": "Corpus", "quantity": 1 }
+    ],
+    "name": "Meteor",
+    "stats": {
+      "critChance": 0,
+      "critMult": 1,
+      "damage": 25,
+      "knockback": 1.5,
+      "type": 2
+    }
+  },
+  {
+    "craftingTime": 3,
+    "description": "A dart that poisons enemies and makes them more flammable",
+    "ingredients": [
+      { "name": "Arrow", "quantity": 1 },
+      { "name": "Poison bubble", "quantity": 1 }
+    ],
+    "name": "Poison dart",
+    "stats": {
+      "critChance": 0.3,
+      "critMult": 1.2,
+      "damage": 18,
+      "knockback": 1,
+      "type": 4
+    }
+  },
+  {
+    "craftingTime": 2,
+    "description": "A bubble that coats enemies in a flammable poison when it pops",
+    "ingredients": [
+      { "name": "Fire ball", "quantity": 1 },
+      { "name": "Corpus", "quantity": 1 }
+    ],
+    "name": "Poison bubble",
+    "stats": {
+      "critChance": 0.5,
+      "critMult": 1.5,
+      "damage": 3,
+      "knockback": 1,
+      "type": 4
+    }
+  },
+  {
+    "craftingTime": 4,
+    "description": "A rotating spear swings around you",
+    "ingredients": [{ "name": "Arrow", "quantity": 2 }],
+    "name": "Spear",
+    "stats": {
+      "critChance": 0.2,
+      "critMult": 1.3,
+      "damage": 5,
+      "knockback": 1.3,
+      "type": 1
+    }
+  },
+  {
+    "craftingTime": 4,
+    "description": "A pentagram of fireballs shoot out of you, the faster they're produced the farther they travel",
+    "ingredients": [{ "name": "Anima", "quantity": 2 }],
+    "name": "Inferno",
+    "stats": {
+      "critChance": 0,
+      "critMult": 1,
+      "damage": 10,
+      "knockback": 2,
+      "type": 2
+    }
+  },
+  {
+    "craftingTime": 2,
+    "description": "A piercing spike of ice targets the nearest enemy, the faster it's produced the more enemies it will pierce",
+    "ingredients": [{ "name": "Spiritus", "quantity": 2 }],
+    "name": "Ice spike",
+    "stats": {
+      "critChance": 0.3,
+      "critMult": 1.4,
+      "damage": 15,
+      "knockback": 1.5,
+      "type": 8
+    }
+  },
+  {
+    "craftingTime": 2,
+    "description": "A large cannonball targets a random enemy, the faster it's produced the larger it will be",
+    "ingredients": [{ "name": "Corpus", "quantity": 2 }],
+    "name": "Cannonball",
+    "stats": {
+      "critChance": 0,
+      "critMult": 1,
+      "damage": 12,
+      "knockback": 4,
+      "type": 1
+    }
+  },
+  {
+    "craftingTime": 5,
+    "description": "A wall of fire guards you from approaching enemies",
+    "ingredients": [{ "name": "Fire column", "quantity": 2 }],
+    "name": "Firewall",
+    "stats": {
+      "critChance": 0,
+      "critMult": 1,
+      "damage": 15,
+      "knockback": 4,
+      "type": 2
+    }
+  },
+  {
+    "craftingTime": 4,
+    "description": "A ray of ice bounces between enemies",
+    "ingredients": [{ "name": "Ice volley", "quantity": 2 }],
+    "name": "Ice ray",
+    "stats": {
+      "critChance": 0.2,
+      "critMult": 1.6,
+      "damage": 20,
+      "knockback": 1,
+      "type": 8
+    }
+  },
+  {
+    "craftingTime": 2,
+    "description": "Electricity shoots out of you hitting nearby enemies",
+    "ingredients": [
+      { "name": "Electric bolt", "quantity": 1 },
+      { "name": "Ball lightning", "quantity": 1 }
+    ],
+    "name": "Electric shock",
+    "stats": {
+      "critChance": 0,
+      "critMult": 1,
+      "damage": 50,
+      "knockback": 0.00000000000208165,
+      "type": 16
+    }
+  },
+  {
+    "craftingTime": 16,
+    "description": "Molten lava falls from the sky",
+    "ingredients": [
+      { "name": "Rain", "quantity": 1 },
+      { "name": "Fire ball", "quantity": 1 }
+    ],
+    "name": "Firestorm",
+    "stats": {
+      "critChance": 0,
+      "critMult": 1,
+      "damage": 0,
+      "knockback": 0.00000000000208165,
+      "type": 2
+    }
+  },
+  {
+    "craftingTime": 4,
+    "description": "Gives $4",
+    "ingredients": [
+      { "name": "Chrysopoeia", "quantity": 1 },
+      { "name": "Spiritus", "quantity": 1 }
+    ],
+    "name": "Chrysopoeia II",
+    "stats": {}
+  },
+  {
+    "craftingTime": 4,
+    "description": "Recovers 1% of your total HP",
+    "ingredients": [{ "name": "Anima", "quantity": 3 }],
+    "name": "Health potion",
+    "stats": {}
+  },
+  {
+    "craftingTime": 7,
+    "description": "Attracts nearby coins",
+    "ingredients": [
+      { "name": "Force field", "quantity": 2 },
+      { "name": "Force wave", "quantity": 1 }
+    ],
+    "name": "Magnetic field",
+    "stats": {}
+  },
+  {
+    "craftingTime": 4,
+    "description": "Increases your base movement speed by 5% for 2.5 seconds",
+    "ingredients": [{ "name": "Spiritus", "quantity": 3 }],
+    "name": "Speed potion",
+    "stats": {}
+  },
+  {
+    "craftingTime": 2,
+    "description": "Increases chance for critical hit by 10% for 2 seconds",
+    "ingredients": [{ "name": "Corpus", "quantity": 3 }],
+    "name": "Luck potion",
+    "stats": {}
+  },
+  {
+    "craftingTime": 4,
+    "description": "Increases your attack damage by 10% for 1 second",
+    "ingredients": [
+      { "name": "Corpus", "quantity": 1 },
+      { "name": "Spiritus", "quantity": 1 },
+      { "name": "Anima", "quantity": 1 }
+    ],
+    "name": "Attack potion",
+    "stats": {}
+  },
+  {
+    "craftingTime": 10,
+    "description": "Gives $2",
+    "ingredients": [
+      { "name": "Corpus", "quantity": 2 },
+      { "name": "Anima", "quantity": 1 }
+    ],
+    "name": "Chrysopoeia",
+    "stats": {}
+  }
+]
