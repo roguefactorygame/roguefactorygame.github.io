@@ -88,6 +88,7 @@ body {
 
 [id^="flowchart-T"] {
   cursor: pointer;
+  transition: opacity 100ms;
 }
 
 .nodeLabel p,
