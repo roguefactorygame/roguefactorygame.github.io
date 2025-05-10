@@ -8,11 +8,16 @@
   src: url("../public/FREEPIXEL.TTF") format("truetype");
 }
 
+@font-face {
+  font-family: "ButtonFont";
+  src: url("../public/PIXEL FONT-7.TTF") format("truetype");
+}
+
 html {
-  background: #4b0861;
+  background: #370548;
   background: linear-gradient(
     180deg,
-    rgba(75, 8, 97, 1) 0%,
+    rgb(57, 5, 75) 0%,
     rgba(41, 4, 56, 1) 100%
   );
 }
@@ -110,6 +115,37 @@ a {
 a:hover {
   --pico-primary-hover-underline: #d15802;
   --pico-primary-hover: #d15802;
+}
+
+nav a {
+  font-family: "PixelFont";
+  text-transform: lowercase;
+}
+
+a.button-primary {
+  display: block;
+  background-color: #54a314;
+  padding: 2px 16px;
+  border-radius: 8px;
+  border-bottom: 4px solid #3d790b;
+  color: #eefde2 !important;
+  text-decoration: none !important;
+  font-family: "ButtonFont";
+  text-transform: lowercase;
+  white-space: nowrap;
+  transition: transform 25ms ease-out;
+}
+
+a.button-primary:hover {
+  display: block;
+  background-color: #65b028;
+  padding: 2px 16px;
+  border-radius: 8px;
+  border-bottom: 4px solid #4d9414;
+  color: #d3f2b9 !important;
+  text-decoration: none !important;
+  font-family: "ButtonFont";
+  transform: scale3d(110%, 110%, 110%);
 }
 
 article {

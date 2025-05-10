@@ -5,6 +5,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import RecipesPage from "./pages/RecipesPage.jsx";
 import DocsPage from "./pages/DocsPage.jsx";
 import HomePage from "./pages/HomePage.jsx";
+import PageContainer from "./components/PageContainer.jsx";
 
 const router = createBrowserRouter([
   {
@@ -23,6 +24,8 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <PageContainer>
+      <RouterProvider router={router} />
+    </PageContainer>
   </StrictMode>
 );

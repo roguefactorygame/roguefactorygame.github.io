@@ -13,7 +13,7 @@ export const Navigation = () => {
     >
       <Link to="/">Home</Link>
       <Link to="/recipes">Recipes</Link>
-      <Link to="/docs/recipes/fireball">Docs</Link>
+      <Link to="/docs/recipes/fireball">Wiki</Link>
     </nav>
   );
 };
