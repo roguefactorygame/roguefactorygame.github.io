@@ -8,49 +8,80 @@
   src: url("../public/FREEPIXEL.TTF") format("truetype");
 }
 
+html {
+  background: #4b0861;
+  background: linear-gradient(
+    180deg,
+    rgba(75, 8, 97, 1) 0%,
+    rgba(41, 4, 56, 1) 100%
+  );
+}
+
+body {
+  --pico-h1-color: rgb(245, 216, 255);
+}
+
 [id*="T0_"] rect {
   fill: #fb92ff !important;
   color: #fb92ff !important;
+  stroke: #89358c !important;
+  filter: drop-shadow(2px 2px 8px rgba(0, 0, 0, 0.5));
 }
 
 [id*="TC_"] rect {
   fill: #f4aecb !important;
   color: #f4aecb !important;
+  stroke: #6c163a !important;
+  filter: drop-shadow(2px 2px 8px rgba(0, 0, 0, 0.5));
 }
 
 [id*="T1_"] rect {
   fill: #ffe6ea !important;
   color: #ffe6ea !important;
+  stroke: #5b101d !important;
+  filter: drop-shadow(2px 2px 8px rgba(0, 0, 0, 0.5));
 }
 
 [id*="TA_"] rect {
   fill: #ffe900 !important;
   color: #ffe900 !important;
+  stroke: #5f580a !important;
+  filter: drop-shadow(2px 2px 8px rgba(0, 0, 0, 0.5));
 }
 
 [id*="T2_"] rect {
   fill: rgba(255, 165.75, 89.25, 1) !important;
   color: rgba(255, 165.75, 89.25, 1) !important;
+  stroke: rgb(110, 59, 14) !important;
+  filter: drop-shadow(2px 2px 8px rgba(0, 0, 0, 0.5));
 }
 
 [id*="T4_"] rect {
   fill: rgba(67.065, 255, 132.09, 1) !important;
   color: rgba(67.065, 255, 132.09, 1) !important;
+  stroke: rgb(9, 100, 41) !important;
+  filter: drop-shadow(2px 2px 8px rgba(0, 0, 0, 0.5));
 }
 
 [id*="TS_"] rect {
   fill: #9fe1f7 !important;
   color: #9fe1f7 !important;
+  stroke: #11556c !important;
+  filter: drop-shadow(2px 2px 8px rgba(0, 0, 0, 0.5));
 }
 
 [id*="T8_"] rect {
   fill: rgba(62.985, 198.9, 255, 1) !important;
   color: rgba(62.985, 198.9, 255, 1) !important;
+  stroke: rgb(7, 72, 99) !important;
+  filter: drop-shadow(2px 2px 8px rgba(0, 0, 0, 0.5));
 }
 
 [id*="T16_"] rect {
   fill: rgba(249.9, 219.29999999999998, 102, 1) !important;
   color: rgba(249.9, 219.29999999999998, 102, 1) !important;
+  stroke: rgb(98, 79, 9) !important;
+  filter: drop-shadow(2px 2px 8px rgba(0, 0, 0, 0.5));
 }
 
 .nodeLabel p,
