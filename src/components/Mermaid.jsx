@@ -38,6 +38,8 @@ export default function Mermaid({
   React.useEffect(() => {
     const nodes = document.querySelectorAll('[id^="flowchart-T"]');
     const set = new Set(highlight);
+    let selectedNodeId = null;
+    const highlightedNodeIds = new Set();
     for (const node of nodes) {
       const label = node.querySelector("p");
       const text = label.innerText;
@@ -48,10 +50,25 @@ export default function Mermaid({
 
       if (text === selection) {
         node.style.opacity = 1.0;
+        selectedNodeId = node
+          .getAttribute("id")
+          .replace("flowchart-", "")
+          .replace(/-\d+/, "");
       } else if (set.has(text)) {
         node.style.opacity = 0.75;
       } else {
-        node.style.opacity = 0.25;
+        node.style.opacity = 0.1;
+      }
+    }
+
+    const edges = document.querySelectorAll(".flowchart-link");
+    for (const edge of edges) {
+      if (!selectedNodeId) {
+        edge.style.opacity = 1.0;
+      } else if (edge.getAttribute("id").includes(selectedNodeId)) {
+        edge.style.opacity = 1.0;
+      } else {
+        edge.style.opacity = 0.1;
       }
     }
   }, [selection, ...(highlight ?? [])]);
