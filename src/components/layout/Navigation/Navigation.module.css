@@ -1,0 +1,29 @@
+.Navigation {
+  display: flex;
+  position: fixed;
+  gap: 1em;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: var(--page-padding);
+  margin: 0 auto;
+  justify-content: center;
+  font-size: var(--menu-font-size);
+  background: var(--rf-purple);
+  background: linear-gradient(
+    180deg,
+    hsl(from var(--rf-purple) h s calc(l * .4) / 0) 0%,
+    hsl(from var(--rf-purple) h s calc(l * .4)) 100%
+  );
+
+  @media (width > 64rem) {
+    position: relative;
+    background: none;
+  }
+}
+
+.Link {
+  line-height: 1;
+  min-width: max-content;
+  font-size: inherit;
+}

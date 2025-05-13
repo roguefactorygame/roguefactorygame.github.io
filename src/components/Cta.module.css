@@ -1,9 +1,16 @@
 .Cta {
-  position: fixed;
-  top: 16px;
-  right: 16px;
   display: flex;
-  flex-direction: column;
-  gap: 10px;
-  z-index: 9999;
+  flex-wrap: wrap;
+  gap: var(--page-padding);
+  margin: var(--page-padding) 0 0;
+  z-index: 2;
+  justify-content: center;
+  
+  @media (width >= 64rem) {
+    position: fixed;
+    top: var(--page-padding);
+    right: var(--page-padding);
+    flex-direction: column;
+    margin: 0;
+  }
 }
