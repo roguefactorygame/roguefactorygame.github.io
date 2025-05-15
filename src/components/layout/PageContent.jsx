@@ -1,4 +1,4 @@
-import { Navigation } from "./Navigation";
+import { Navigation } from "./Navigation/Navigation";
 import styles from "./PageContent.module.css";
 
 export const PageContent = ({ children }) => {

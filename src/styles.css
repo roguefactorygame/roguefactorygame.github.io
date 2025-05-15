@@ -13,9 +13,26 @@
   src: url("../public/PIXEL FONT-7.TTF") format("truetype");
 }
 
+:root {
+  /* Breakpoints */
+  --bp-sm: 40rem;
+  --bp-md: 48rem;
+  --bp-lg: 64rem;
+  --bp-xl: 80rem;
+  --bp-2xl: 96rem;
+
+  --rf-purple: #2c0339;
+  --page-padding: 16px;
+  --menu-font-size: 2rem;
+}
+
 html {
-  background: #2c0339;
-  background: linear-gradient(180deg, rgb(37, 3, 48) 0%, rgb(24, 1, 34) 100%);
+  background: var(--rf-purple);
+  background: linear-gradient(
+    180deg,
+    hsl(from var(--rf-purple) h s calc(l * .8)) 0%,
+    hsl(from var(--rf-purple) h s calc(l * .6)) 100%
+  );
 }
 
 body {

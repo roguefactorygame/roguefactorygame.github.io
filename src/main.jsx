@@ -1,11 +1,11 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import "./styles.css";
 import { createHashRouter, RouterProvider } from "react-router-dom";
-import RecipesPage from "./pages/RecipesPage.jsx";
+import PageContainer from "./components/layout/PageContainer.jsx";
 import DocsPage from "./pages/DocsPage.jsx";
 import HomePage from "./pages/HomePage.jsx";
-import PageContainer from "./components/PageContainer.jsx";
+import RecipesPage from "./pages/RecipesPage.jsx";
+import "./styles.css";
 
 const router = createHashRouter([
   {

@@ -1,7 +1,7 @@
 import React from "react";
 import Markdown from "react-markdown";
 import { useParams } from "react-router-dom";
-import { PageContent } from "../components/PageContent";
+import { PageContent } from "../components/layout/PageContent";
 
 export default function DocsPage() {
   const { directory, file } = useParams();
