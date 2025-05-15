@@ -1,7 +1,7 @@
 .RecipeGraph {
   flex-grow: 1;
   overflow: hidden;
-  border: 2px solid hsl(from var(--rf-purple) h s calc(l * 1.5));
+  border: 2px solid var(--rf-border-color);
   border-radius: 8px;
   background-color: var(--rf-purple);
   position: absolute;
@@ -22,9 +22,15 @@
   right: 0;
   top: 0;
   bottom: 0;
-  background: hsl(from var(--rf-purple) h s calc(l * 1.5));
+  background: var(--rf-purple-grey);
   padding: 8px;
   box-shadow: -2px 0px 32px rgba(0, 0, 0, 0.5);
+  transform: translateX(100%);
+  transition: 100ms transform;
+}
+
+.RecipeGraphInfoWithContent {
+  transform: translateX(0) !important;
 }
 
 .RecipeGraphInfoClose {
@@ -36,12 +42,17 @@
   border-radius: 100%;
   width: 32px;
   height: 32px;
-  background-color: #6973a1;
+  background-color: hsl(from var(--rf-purple-grey) h s calc(l - 25));
   text-align: center;
   vertical-align: middle;
   border: none;
   font-size: 32px;
   font-family: "PixelFont";
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.RecipeGraphInfoClose:hover {
+  background-color: hsl(from var(--rf-purple-grey) h s calc(l - 15));
 }
 
 .RecipeGraphInfoClose::after {
@@ -57,14 +68,14 @@
   text-decoration: underline;
   font-size: 32px;
   letter-spacing: -0.1rem;
-  color: #fcf3ff;
+  color: var(--rf-purple);
 }
 
 .RecipeGraphInfo section {
   font-family: "M5X7";
   line-height: 50%;
   font-size: 32px;
-  color: #efd5f7;
+  color: hsl(from var(--rf-purple-grey) h s calc(l - 35));
   padding: 4px;
 }
 
@@ -76,17 +87,19 @@
 .RecipeGraphInfo li {
   margin-left: 8px;
   padding: 4px;
-  color: #efd5f7;
+  color: hsl(from var(--rf-purple-grey) h s calc(l - 35));
 }
 
 .RecipeGraphInfo a {
   display: inline;
-  --pico-underline: #efd5f7;
-  --pico-primary: #efd5f7;
+  --pico-underline: hsl(from var(--rf-purple-grey) h s calc(l - 35));
+  --pico-primary: hsl(from var(--rf-purple-grey) h s calc(l - 35));
   cursor: pointer;
 }
 
 .RecipeGraphInfo a:hover {
-  --pico-primary-hover-underline: #d4a5e2;
-  --pico-primary-hover: #d4a5e2;
+  --pico-primary-hover-underline: hsl(
+    from var(--rf-purple-grey) h s calc(l - 25)
+  );
+  --pico-primary-hover: hsl(from var(--rf-purple-grey) h s calc(l - 25));
 }

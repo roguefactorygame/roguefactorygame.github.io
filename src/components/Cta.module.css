@@ -5,7 +5,7 @@
   margin: var(--page-padding) 0 0;
   z-index: 2;
   justify-content: center;
-  
+
   @media (width >= 64rem) {
     position: fixed;
     top: var(--page-padding);

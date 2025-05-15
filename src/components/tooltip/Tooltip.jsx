@@ -1,9 +1,11 @@
 import ReactDOM from "react-dom";
 import React from "react";
+import cx from "classnames";
 import { useTooltipContainerRef } from "./TooltipContainer";
 import styles from "./Tooltip.module.css";
+import { ElementalType } from "../../utils/enums";
 
-export const Tooltip = ({ children }) => {
+export const Tooltip = ({ type, children }) => {
   const ref = useTooltipContainerRef();
   const [mousePos, setMousePos] = React.useState({ x: 0, y: 0 });
 
@@ -35,7 +37,10 @@ export const Tooltip = ({ children }) => {
 
   return ReactDOM.createPortal(
     <div
-      className={styles.tooltip}
+      className={cx(
+        styles.tooltip,
+        styles[(type ? ElementalType[type] : "potion").toLowerCase()]
+      )}
       style={{
         left: mousePos.x,
         top: mousePos.y,
