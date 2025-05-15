@@ -49,7 +49,7 @@ config:
     layout: elk
     elk:
         mergeEdges: false
-        nodePlacementStrategy: LINEAR_SEGMENTS
+        nodePlacementStrategy: SIMPLE
 ---
 %%{
     init: {

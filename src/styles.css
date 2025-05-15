@@ -21,7 +21,7 @@
   --bp-xl: 80rem;
   --bp-2xl: 96rem;
 
-  --rf-purple: #2c0339;
+  --rf-purple: #1b0339;
   --page-padding: 16px;
   --menu-font-size: 2rem;
 }
@@ -30,8 +30,8 @@ html {
   background: var(--rf-purple);
   background: linear-gradient(
     180deg,
-    hsl(from var(--rf-purple) h s calc(l * .8)) 0%,
-    hsl(from var(--rf-purple) h s calc(l * .6)) 100%
+    hsl(from var(--rf-purple) h s calc(l * 0.8)) 0%,
+    hsl(from var(--rf-purple) h s calc(l * 0.6)) 100%
   );
 }
 
@@ -108,8 +108,18 @@ body {
   transition: opacity 250ms;
 }
 
+[id^="flowchart-T"] rect {
+  cursor: pointer;
+  transition: transform 100ms ease-out;
+}
+
 [id^="flowchart-T"]:hover {
   opacity: 1 !important;
+}
+
+[id^="flowchart-T"]:hover rect {
+  opacity: 1 !important;
+  transform: scale(1.1);
 }
 
 .nodeLabel p,

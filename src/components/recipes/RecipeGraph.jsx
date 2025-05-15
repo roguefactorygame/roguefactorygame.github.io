@@ -5,7 +5,7 @@ import { toChart } from "../../utils/toChart";
 import Mermaid from "./Mermaid";
 import styles from "./RecipeGraph.module.css";
 
-export default function RecipeGraph({ ...props }) {
+export default function RecipeGraph({ onHover, ...props }) {
   const [element, setElement] = React.useState(null);
   const { mermaid, recipeMap, ingredientMap } = React.useMemo(
     () => toChart(recipes),
@@ -21,6 +21,28 @@ export default function RecipeGraph({ ...props }) {
   );
   const panzoomRef = React.useRef(null);
 
+  const ingredientChain = React.useMemo(() => {
+    if (!recipe) {
+      return [];
+    }
+
+    const allIngredients = new Set();
+    let currentDepth = new Set([recipe.name]);
+    let failsafe = 0;
+    while (currentDepth.size && failsafe++ < 20) {
+      const nextDepth = new Set();
+      for (const recipeName of currentDepth) {
+        const recipe = recipeMap[recipeName];
+        for (const ingredient of recipe?.ingredients ?? []) {
+          nextDepth.add(ingredient.name);
+          allIngredients.add(ingredient.name);
+        }
+      }
+      currentDepth = nextDepth;
+    }
+    return [...allIngredients];
+  }, [recipe]);
+
   React.useEffect(() => {
     if (element) {
       panzoomRef.current = new Panzoom(element);
@@ -34,15 +56,21 @@ export default function RecipeGraph({ ...props }) {
   };
 
   const onClick = (name) => {
-    setSelectedRecipeName(name);
+    setSelectedRecipeName((current) => {
+      if (current === name) {
+        return null;
+      } else {
+        return name;
+      }
+    });
   };
 
   const onMouseOver = (name) => {
-    // setHoveredRecipeName(name);
+    onHover(recipeMap[name]);
   };
 
   const onMouseOut = (name) => {
-    // setHoveredRecipeName(null);
+    onHover(null);
   };
 
   return (
@@ -54,7 +82,7 @@ export default function RecipeGraph({ ...props }) {
           onMouseOut={onMouseOut}
           onMouseOver={onMouseOver}
           selection={selectedRecipeName}
-          highlight={[...(products || []), ...(ingredientNames || [])]}
+          highlight={[...(products || []), ...(ingredientChain || [])]}
         />
       </div>
       <aside className={styles.RecipeGraphInfo}>

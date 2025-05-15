@@ -39,12 +39,11 @@ export default function Mermaid({
     const nodes = document.querySelectorAll('[id^="flowchart-T"]');
     const set = new Set(highlight);
     let selectedNodeId = null;
-    const highlightedNodeIds = new Set();
     for (const node of nodes) {
       const label = node.querySelector("p");
       const text = label.innerText;
       if (set.size === 0) {
-        node.style.opacity = 1;
+        node.style.opacity = 0.8;
         continue;
       }
 
@@ -65,7 +64,7 @@ export default function Mermaid({
     for (const edge of edges) {
       if (!selectedNodeId) {
         edge.style.opacity = 1.0;
-      } else if (edge.getAttribute("id").includes(selectedNodeId)) {
+      } else if (edge.getAttribute("id").includes(`${selectedNodeId}_`)) {
         edge.style.opacity = 1.0;
       } else {
         edge.style.opacity = 0.1;
