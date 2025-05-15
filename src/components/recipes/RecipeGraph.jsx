@@ -5,6 +5,7 @@ import recipes from "../../data/recipes.json";
 import { toChart } from "../../utils/toChart";
 import Mermaid from "./Mermaid";
 import styles from "./RecipeGraph.module.css";
+import { formatAssemblerName } from "../../utils/formatAssemblerName";
 
 export default function RecipeGraph({ onHover, ...props }) {
   const [element, setElement] = React.useState(null);
@@ -16,10 +17,7 @@ export default function RecipeGraph({ onHover, ...props }) {
   const [selectedRecipeName, setSelectedRecipeName] = React.useState(null);
   const recipe = selectedRecipeName && recipeMap[selectedRecipeName];
   const products = selectedRecipeName && ingredientMap[selectedRecipeName];
-  const ingredientNames = React.useMemo(
-    () => recipe && recipe.ingredients.map((ingredient) => ingredient.name),
-    [recipe]
-  );
+  const assemblerName = formatAssemblerName(recipe?.ingredients?.length);
   const panzoomRef = React.useRef(null);
 
   const ingredientChain = React.useMemo(() => {
@@ -99,6 +97,11 @@ export default function RecipeGraph({ onHover, ...props }) {
               onClick={() => setSelectedRecipeName(null)}
             />
             <header>{selectedRecipeName}</header>
+            {assemblerName && (
+              <section className={styles.AssemblerInfo}>
+                Made in <strong>{assemblerName}</strong>
+              </section>
+            )}
             <section>{recipe.description}</section>
             <header>Ingredients:</header>
             <section>
