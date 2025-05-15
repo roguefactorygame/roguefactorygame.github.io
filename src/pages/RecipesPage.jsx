@@ -14,7 +14,7 @@ export default function RecipesPage() {
     <PageContent>
       <RecipeGraph onHover={onHovered} />
       {hoveredRecipe && (
-        <Tooltip>
+        <Tooltip type={hoveredRecipe.stats.type}>
           <header>{hoveredRecipe.name}</header>
           <div>{hoveredRecipe.description}</div>
         </Tooltip>

@@ -1,5 +1,6 @@
 import Panzoom from "@panzoom/panzoom";
 import React from "react";
+import cx from "classnames";
 import recipes from "../../data/recipes.json";
 import { toChart } from "../../utils/toChart";
 import Mermaid from "./Mermaid";
@@ -85,7 +86,12 @@ export default function RecipeGraph({ onHover, ...props }) {
           highlight={[...(products || []), ...(ingredientChain || [])]}
         />
       </div>
-      <aside className={styles.RecipeGraphInfo}>
+      <aside
+        className={cx(
+          styles.RecipeGraphInfo,
+          recipe && styles.RecipeGraphInfoWithContent
+        )}
+      >
         {recipe && (
           <>
             <button
