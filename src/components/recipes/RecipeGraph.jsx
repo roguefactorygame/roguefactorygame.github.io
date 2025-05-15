@@ -5,7 +5,7 @@ import { toChart } from "../../utils/toChart";
 import Mermaid from "./Mermaid";
 import styles from "./RecipeGraph.module.css";
 
-export default function RecipeGraph({ ...props }) {
+export default function RecipeGraph({ onHover, ...props }) {
   const [element, setElement] = React.useState(null);
   const { mermaid, recipeMap, ingredientMap } = React.useMemo(
     () => toChart(recipes),
@@ -66,11 +66,11 @@ export default function RecipeGraph({ ...props }) {
   };
 
   const onMouseOver = (name) => {
-    // setHoveredRecipeName(name);
+    onHover(recipeMap[name]);
   };
 
   const onMouseOut = (name) => {
-    // setHoveredRecipeName(null);
+    onHover(null);
   };
 
   return (
