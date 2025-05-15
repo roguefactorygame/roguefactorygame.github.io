@@ -1,5 +1,5 @@
-import { PageContent } from "../components/PageContent";
-import RecipeGraph from "../components/RecipeGraph";
+import { PageContent } from "../components/layout/PageContent";
+import RecipeGraph from "../components/recipes/RecipeGraph";
 
 export default function RecipesPage() {
   return (

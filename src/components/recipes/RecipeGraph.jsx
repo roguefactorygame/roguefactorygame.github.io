@@ -1,8 +1,8 @@
-import React from "react";
-import { toChart } from "../utils/toChart";
-import Mermaid from "./Mermaid";
-import recipes from "../data/recipes.json";
 import Panzoom from "@panzoom/panzoom";
+import React from "react";
+import recipes from "../../data/recipes.json";
+import { toChart } from "../../utils/toChart";
+import Mermaid from "./Mermaid";
 import styles from "./RecipeGraph.module.css";
 
 export default function RecipeGraph({ ...props }) {
