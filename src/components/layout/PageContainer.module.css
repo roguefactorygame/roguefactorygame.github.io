@@ -10,7 +10,7 @@
 .PageContainer {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: 100svh;
   padding: var(--page-padding) var(--page-padding) calc(var(--page-padding) * 2 + var(--menu-font-size));
 
   @media (width > 64rem) {
