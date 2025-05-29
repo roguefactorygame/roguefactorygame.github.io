@@ -5,6 +5,7 @@ import recipes from "../../data/recipes.json";
 import { toChart } from "../../utils/toChart";
 import Mermaid from "./Mermaid";
 import styles from "./RecipeGraph.module.css";
+import { ElementalType } from "../../utils/enums";
 
 export default function RecipeGraph({ onHover, ...props }) {
   const [element, setElement] = React.useState(null);
@@ -20,6 +21,34 @@ export default function RecipeGraph({ onHover, ...props }) {
     () => recipe && recipe.ingredients.map((ingredient) => ingredient.name),
     [recipe]
   );
+
+  const getColorStyle = (name) => {
+    const recipe = recipeMap[name];
+    if (!recipe) {
+      return null;
+    }
+
+    if (!recipe?.stats?.type) {
+      return { color: "var(--rf-potion)" };
+    }
+
+    return {
+      color: `var(--rf-${
+        ElementalType[recipe?.stats?.type]?.toLowerCase() ?? "potion"
+      })`,
+    };
+  };
+
+  const ingredientCount = React.useMemo(() => {
+    if (!recipe) {
+      return 0;
+    }
+
+    return recipe.ingredients.reduce(
+      (res, ingredient) => res + ingredient.quantity,
+      0
+    );
+  }, [recipe]);
   const panzoomRef = React.useRef(null);
 
   const ingredientChain = React.useMemo(() => {
@@ -57,6 +86,7 @@ export default function RecipeGraph({ onHover, ...props }) {
   };
 
   const onClick = (name) => {
+    onMouseOut();
     setSelectedRecipeName((current) => {
       if (current === name) {
         return null;
@@ -98,15 +128,28 @@ export default function RecipeGraph({ onHover, ...props }) {
               className={styles.RecipeGraphInfoClose}
               onClick={() => setSelectedRecipeName(null)}
             />
-            <header>{selectedRecipeName}</header>
+            <header style={getColorStyle(selectedRecipeName)}>
+              {selectedRecipeName}
+            </header>
+            <section>
+              Made in{" "}
+              <span className={styles.AssemblerType}>
+                Assembler {"I".repeat(ingredientCount)}
+              </span>
+            </section>
             <section>{recipe.description}</section>
-            <header>Ingredients:</header>
+            <header style={{ opacity: 0.5 }}>Ingredients:</header>
             <section>
               <ul>
                 {recipe.ingredients.map((ingredient) => (
                   <li>
                     -{" "}
-                    <a onClick={() => setSelectedRecipeName(ingredient.name)}>
+                    <a
+                      onClick={() => onClick(ingredient.name)}
+                      onMouseOver={() => onMouseOver(ingredient.name)}
+                      onMouseOut={onMouseOut}
+                      style={getColorStyle(ingredient.name)}
+                    >
                       {ingredient.name}
                     </a>{" "}
                     {ingredient.quantity > 1 ? ` x ${ingredient.quantity}` : ""}
@@ -116,13 +159,18 @@ export default function RecipeGraph({ onHover, ...props }) {
             </section>
             {products && (
               <>
-                <header>Used in:</header>
+                <header style={{ opacity: 0.5 }}>Used in:</header>
                 <section>
                   <ul>
                     {products.map((product) => (
                       <li>
                         -{" "}
-                        <a onClick={() => setSelectedRecipeName(product)}>
+                        <a
+                          onClick={() => onClick(product)}
+                          onMouseOver={() => onMouseOver(product)}
+                          onMouseOut={onMouseOut}
+                          style={getColorStyle(product)}
+                        >
                           {product}
                         </a>
                       </li>
