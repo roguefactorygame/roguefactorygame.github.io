@@ -142,7 +142,7 @@ export default function RecipeGraph({ onHover, ...props }) {
             <section>
               <ul>
                 {recipe.ingredients.map((ingredient) => (
-                  <li>
+                  <li key={ingredient.name}>
                     -{" "}
                     <a
                       onClick={() => onClick(ingredient.name)}
@@ -163,7 +163,7 @@ export default function RecipeGraph({ onHover, ...props }) {
                 <section>
                   <ul>
                     {products.map((product) => (
-                      <li>
+                      <li key={product}>
                         -{" "}
                         <a
                           onClick={() => onClick(product)}

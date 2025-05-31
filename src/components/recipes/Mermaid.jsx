@@ -1,6 +1,8 @@
 import elkLayouts from "https://cdn.jsdelivr.net/npm/@mermaid-js/layout-elk@0/dist/mermaid-layout-elk.esm.min.mjs";
 import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs";
 import React from "react";
+import cx from 'classnames'
+import styles from './Mermaid.module.css'
 
 mermaid.registerLayoutLoaders(elkLayouts);
 mermaid.initialize({
@@ -18,22 +20,29 @@ export default function Mermaid({
 }) {
   const id = React.useId();
   const [className] = React.useState(() => `mermaid-${ID++}`);
+  const [isLoaded, setIsLoaded] = React.useState(false);
 
   React.useEffect(() => {
-    Promise.resolve(
-      mermaid.run({
-        nodes: document.querySelectorAll('[class^="mermaid"]'),
+    if (!definition) {
+      return;
+    }
+
+    Promise.resolve()
+      .then(() =>  mermaid.run({
+        nodes: document.querySelectorAll(`.${className}`),
+      }))
+      .then(() => {
+        const nodes = document.querySelectorAll('[id^="flowchart-T"]');
+        for (const node of nodes) {
+          const label = node.querySelector("p");
+          node.addEventListener("click", () => onClick(label.innerText));
+          node.addEventListener("mouseover", () => onMouseOver(label.innerText));
+          node.addEventListener("mouseout", () => onMouseOut(label.innerText));
+        }
+        setIsLoaded(true);
       })
-    ).then(() => {
-      const nodes = document.querySelectorAll('[id^="flowchart-T"]');
-      for (const node of nodes) {
-        const label = node.querySelector("p");
-        node.addEventListener("click", () => onClick(label.innerText));
-        node.addEventListener("mouseover", () => onMouseOver(label.innerText));
-        node.addEventListener("mouseout", () => onMouseOut(label.innerText));
-      }
-    });
-  }, [definition, id]);
+      .catch(console.error);
+  }, [definition, id, className]);
 
   React.useEffect(() => {
     const nodes = document.querySelectorAll('[id^="flowchart-T"]');
@@ -70,7 +79,7 @@ export default function Mermaid({
         edge.style.opacity = 0.1;
       }
     }
-  }, [selection, ...(highlight ?? [])]);
+  }, [selection, (highlight ?? []).join(',')]);
 
-  return <div className={className}>{definition}</div>;
+  return <div className={cx(className, styles.MermaidContainer, isLoaded && styles.MermaidContainerLoaded)}>{definition}</div>;
 }
