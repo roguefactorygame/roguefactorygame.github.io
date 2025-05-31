@@ -1,3 +1,4 @@
+import { TrailerEmbed } from "../components/TrailerEmbed";
 import { PageContent } from "../components/layout/PageContent";
 
 export default function HomePage() {
@@ -17,7 +18,9 @@ export default function HomePage() {
         }}
       >
         <article>
-          <h2>This site is a work in progress</h2>
+          <h2 style={{ marginBottom: 0 }}>Welcome to Rogue Factory!</h2>
+          <h3>The Automation Bullet Heaven</h3>
+          <TrailerEmbed />
         </article>
       </div>
     </PageContent>
