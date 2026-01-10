@@ -54,6 +54,7 @@ body {
   overflow: hidden;
 }
 
+[id*="T0_"] path,
 [id*="T0_"] rect {
   fill: var(--rf-potion) !important;
   color: var(--rf-potion) !important;
@@ -61,6 +62,7 @@ body {
   filter: drop-shadow(2px 2px 8px rgba(0, 0, 0, 0.5));
 }
 
+[id*="TC_"] path,
 [id*="TC_"] rect {
   fill: var(--rf-corpus) !important;
   color: var(--rf-corpus) !important;
@@ -68,6 +70,7 @@ body {
   filter: drop-shadow(2px 2px 8px rgba(0, 0, 0, 0.5));
 }
 
+[id*="T1_"] path,
 [id*="T1_"] rect {
   fill: var(--rf-physical) !important;
   color: var(--rf-physical) !important;
@@ -75,6 +78,7 @@ body {
   filter: drop-shadow(2px 2px 8px rgba(0, 0, 0, 0.5));
 }
 
+[id*="TA_"] path,
 [id*="TA_"] rect {
   fill: var(--rf-anima) !important;
   color: var(--rf-anima) !important;
@@ -82,6 +86,7 @@ body {
   filter: drop-shadow(2px 2px 8px rgba(0, 0, 0, 0.5));
 }
 
+[id*="T2_"] path,
 [id*="T2_"] rect {
   fill: var(--rf-fire) !important;
   color: var(--rf-fire) !important;
@@ -89,6 +94,7 @@ body {
   filter: drop-shadow(2px 2px 8px rgba(0, 0, 0, 0.5));
 }
 
+[id*="T4_"] path,
 [id*="T4_"] rect {
   fill: var(--rf-poison) !important;
   color: var(--rf-poison) !important;
@@ -96,6 +102,7 @@ body {
   filter: drop-shadow(2px 2px 8px rgba(0, 0, 0, 0.5));
 }
 
+[id*="TS_"] path,
 [id*="TS_"] rect {
   fill: var(--rf-spiritus) !important;
   color: var(--rf-spiritus) !important;
@@ -103,6 +110,7 @@ body {
   filter: drop-shadow(2px 2px 8px rgba(0, 0, 0, 0.5));
 }
 
+[id*="T8_"] path,
 [id*="T8_"] rect {
   fill: var(--rf-ice) !important;
   color: var(--rf-ice) !important;
@@ -110,6 +118,7 @@ body {
   filter: drop-shadow(2px 2px 8px rgba(0, 0, 0, 0.5));
 }
 
+[id*="T16_"] path,
 [id*="T16_"] rect {
   fill: var(--rf-lightning) !important;
   color: var(--rf-lightning) !important;
@@ -122,6 +131,7 @@ body {
   transition: opacity 250ms;
 }
 
+[id^="flowchart-T"] path,
 [id^="flowchart-T"] rect {
   cursor: pointer;
   transition: transform 100ms ease-out;
@@ -131,7 +141,7 @@ body {
   opacity: 1 !important;
 }
 
-[id^="flowchart-T"]:hover rect {
+[id^="flowchart-T"]:hover path {
   opacity: 1 !important;
   transform: scale(1.1);
 }

@@ -55,7 +55,7 @@
     "craftingTime": 4,
     "description": "Burst of fire that orbits around you",
     "ingredients": [{ "name": "Fire ball", "quantity": 1 }],
-    "name": "Fire blast",
+    "name": "Fire whirl",
     "stats": {
       "critChance": 0.15,
       "critMult": 1.125,
@@ -67,7 +67,7 @@
   {
     "craftingTime": 12,
     "description": "A flame shoots out from you instantly setting any enemy in your path on fire",
-    "ingredients": [{ "name": "Fire blast", "quantity": 1 }],
+    "ingredients": [{ "name": "Fire whirl", "quantity": 1 }],
     "name": "Flamethrower",
     "stats": {
       "critChance": 0,
@@ -79,9 +79,9 @@
   },
   {
     "craftingTime": 8,
-    "description": "A beam of ice ricochets freezing enemies it passes through",
+    "description": "A ball of snow ricochets freezing enemies it passes through",
     "ingredients": [{ "name": "Ice shards", "quantity": 1 }],
-    "name": "Freeze beam",
+    "name": "Snowball",
     "stats": {
       "critChance": 0.2,
       "critMult": 1.2,
@@ -98,7 +98,7 @@
     "stats": {
       "critChance": 0,
       "critMult": 1,
-      "damage": 8,
+      "damage": 10,
       "knockback": 1.2,
       "type": 8
     }
@@ -163,7 +163,7 @@
     "stats": {
       "critChance": 0,
       "critMult": 1,
-      "damage": 3,
+      "damage": 10,
       "knockback": 0.00000000000208165,
       "type": 32
     }
@@ -176,7 +176,7 @@
     "stats": {
       "critChance": 0,
       "critMult": 1,
-      "damage": 10,
+      "damage": 3,
       "knockback": 4,
       "type": 1
     }
@@ -193,6 +193,13 @@
       "knockback": 1,
       "type": 1
     }
+  },
+  {
+    "craftingTime": 8,
+    "description": "Gives $2 for each Farm totem",
+    "ingredients": [{ "name": "Chrysopoeia II", "quantity": 1 }],
+    "name": "Chrysopoeia III",
+    "stats": {}
   },
   {
     "craftingTime": 10,
@@ -269,7 +276,7 @@
     "stats": {
       "critChance": 0,
       "critMult": 1,
-      "damage": 3,
+      "damage": 5,
       "knockback": 0.00000000000208165,
       "type": 32
     }
@@ -311,9 +318,9 @@
     "description": "Rapidly shoots fireballs in a rotating spiral",
     "ingredients": [
       { "name": "Fire ball", "quantity": 1 },
-      { "name": "Fire blast", "quantity": 1 }
+      { "name": "Fire whirl", "quantity": 1 }
     ],
-    "name": "Fire barrage",
+    "name": "Blaze barrage",
     "stats": {
       "critChance": 0.2,
       "critMult": 1.2,
@@ -326,7 +333,7 @@
     "craftingTime": 2,
     "description": "A column of fire that instantly burns all enemies in its path",
     "ingredients": [{ "name": "Fire ball", "quantity": 2 }],
-    "name": "Fire column",
+    "name": "Burning column",
     "stats": {
       "critChance": 0,
       "critMult": 1,
@@ -336,8 +343,8 @@
     }
   },
   {
-    "craftingTime": 3,
-    "description": "A circle of energy that pushes enemies away from you",
+    "craftingTime": 6,
+    "description": "A circle of energy that pushes enemies and their projectiles away from you",
     "ingredients": [
       { "name": "Spiritus", "quantity": 1 },
       { "name": "Anima", "quantity": 1 }
@@ -445,7 +452,7 @@
     "craftingTime": 2,
     "description": "A meteor falls from the sky",
     "ingredients": [
-      { "name": "Fire blast", "quantity": 1 },
+      { "name": "Fire whirl", "quantity": 1 },
       { "name": "Corpus", "quantity": 1 }
     ],
     "name": "Meteor",
@@ -544,7 +551,7 @@
   {
     "craftingTime": 5,
     "description": "A wall of fire guards you from approaching enemies",
-    "ingredients": [{ "name": "Fire column", "quantity": 2 }],
+    "ingredients": [{ "name": "Burning column", "quantity": 2 }],
     "name": "Firewall",
     "stats": {
       "critChance": 0,
@@ -558,7 +565,7 @@
     "craftingTime": 4,
     "description": "A ray of ice bounces between enemies",
     "ingredients": [{ "name": "Ice volley", "quantity": 2 }],
-    "name": "Ice ray",
+    "name": "Arctic ray",
     "stats": {
       "critChance": 0.2,
       "critMult": 1.6,
@@ -611,7 +618,80 @@
   },
   {
     "craftingTime": 4,
-    "description": "Recovers 1% of your total HP",
+    "description": "Increase damage by [color=white]50%[/color] for each Rodent totem",
+    "ingredients": [
+      { "name": "Attack potion", "quantity": 1 },
+      { "name": "Corpus", "quantity": 1 }
+    ],
+    "name": "Tooth of Rat",
+    "stats": {}
+  },
+  {
+    "craftingTime": 4,
+    "description": "Increases critical hit damage by [color=white]75%[/color] for each Bird totem",
+    "ingredients": [
+      { "name": "Luck potion", "quantity": 1 },
+      { "name": "Corpus", "quantity": 1 }
+    ],
+    "name": "Feather of Crow",
+    "stats": {}
+  },
+  {
+    "craftingTime": 4,
+    "description": "Increase damage over time by [color=white]50%[/color] for each Reptile totem",
+    "ingredients": [
+      { "name": "Attack potion", "quantity": 1 },
+      { "name": "Spiritus", "quantity": 1 }
+    ],
+    "name": "Eye of Newt",
+    "stats": {}
+  },
+  {
+    "craftingTime": 4,
+    "description": "Increase knockback by [color=white]20%[/color] for each Insect totem",
+    "ingredients": [
+      { "name": "Defense potion", "quantity": 1 },
+      { "name": "Spiritus", "quantity": 1 }
+    ],
+    "name": "Head of Mantis",
+    "stats": {}
+  },
+  {
+    "craftingTime": 4,
+    "description": "Increase attack size by [color=white]20%[/color] for each Aquatic totem",
+    "ingredients": [
+      { "name": "Speed potion", "quantity": 1 },
+      { "name": "Anima", "quantity": 1 }
+    ],
+    "name": "Fin of Shark",
+    "stats": {}
+  },
+  {
+    "craftingTime": 4,
+    "description": "Increases attack by [color=white]{attack_potion_2_effect}x[/color] for {attack_potion_duration}sec. Max stacks: {attack_potion_max_stacks}",
+    "ingredients": [
+      { "name": "Attack potion", "quantity": 1 },
+      { "name": "Chrysopoeia", "quantity": 1 }
+    ],
+    "name": "Magnum opus",
+    "stats": {}
+  },
+  {
+    "craftingTime": 4,
+    "description": "A stream of water targets a random enemy",
+    "ingredients": [{ "name": "Bubble", "quantity": 2 }],
+    "name": "Hydro stream",
+    "stats": {
+      "critChance": 0,
+      "critMult": 0,
+      "damage": 35,
+      "knockback": 5,
+      "type": 32
+    }
+  },
+  {
+    "craftingTime": 4,
+    "description": "Recovers [color=white]{health_potion_effect}%[/color] of your total HP",
     "ingredients": [{ "name": "Anima", "quantity": 3 }],
     "name": "Health potion",
     "stats": {}
@@ -627,22 +707,22 @@
     "stats": {}
   },
   {
-    "craftingTime": 4,
-    "description": "Increases your base movement speed by 5% for 2.5 seconds",
+    "craftingTime": 6,
+    "description": "Increases base movement speed by [color=white]{speed_potion_effect}%[/color] for {speed_potion_duration}sec. Max stacks: {speed_potion_max_stacks}",
     "ingredients": [{ "name": "Spiritus", "quantity": 3 }],
     "name": "Speed potion",
     "stats": {}
   },
   {
     "craftingTime": 2,
-    "description": "Increases chance for critical hit by 10% for 2 seconds",
+    "description": "Increases chance for critical hit by [color=white]{luck_potion_effect}%[/color] for {luck_potion_duration}sec. Max stacks: {luck_potion_max_stacks}",
     "ingredients": [{ "name": "Corpus", "quantity": 3 }],
     "name": "Luck potion",
     "stats": {}
   },
   {
-    "craftingTime": 4,
-    "description": "Increases your attack damage by 10% for 1 second",
+    "craftingTime": 8,
+    "description": "Increases attack by [color=white]{attack_potion_1_effect}%[/color] for {attack_potion_duration}sec. Max stacks: {attack_potion_max_stacks}",
     "ingredients": [
       { "name": "Corpus", "quantity": 1 },
       { "name": "Spiritus", "quantity": 1 },
@@ -652,7 +732,7 @@
     "stats": {}
   },
   {
-    "craftingTime": 10,
+    "craftingTime": 8,
     "description": "Gives $2",
     "ingredients": [
       { "name": "Corpus", "quantity": 2 },
@@ -660,5 +740,93 @@
     ],
     "name": "Chrysopoeia",
     "stats": {}
+  },
+  {
+    "craftingTime": 4,
+    "description": "A piercing strike towards the nearest enemy",
+    "ingredients": [{ "name": "Arrow", "quantity": 3 }],
+    "name": "Sword strike",
+    "stats": {
+      "critChance": 0.2,
+      "critMult": 1.5,
+      "damage": 40,
+      "knockback": 2,
+      "type": 1
+    }
+  },
+  {
+    "craftingTime": 4,
+    "description": "Magical fire staff swings towards the nearest enemy",
+    "ingredients": [{ "name": "Fire ball", "quantity": 3 }],
+    "name": "Ember staff",
+    "stats": {
+      "critChance": 0,
+      "critMult": 0,
+      "damage": 35,
+      "knockback": 1,
+      "type": 2
+    }
+  },
+  {
+    "craftingTime": 2,
+    "description": "An axe of ice swings towards a random enemy ",
+    "ingredients": [{ "name": "Icicle", "quantity": 3 }],
+    "name": "Frost axe",
+    "stats": {
+      "critChance": 0,
+      "critMult": 0,
+      "damage": 40,
+      "knockback": 3,
+      "type": 8
+    }
+  },
+  {
+    "craftingTime": 2,
+    "description": "A poisonous scythe swipes nearby enemies",
+    "ingredients": [{ "name": "Poison bubble", "quantity": 3 }],
+    "name": "Poison scythe",
+    "stats": {
+      "critChance": 0,
+      "critMult": 0,
+      "damage": 50,
+      "knockback": 1,
+      "type": 4
+    }
+  },
+  {
+    "craftingTime": 2,
+    "description": "An electrified hammer is thrown",
+    "ingredients": [{ "name": "Electric bolt", "quantity": 3 }],
+    "name": "Voltaic hammer",
+    "stats": {
+      "critChance": 0.25,
+      "critMult": 1.25,
+      "damage": 55,
+      "knockback": 2,
+      "type": 16
+    }
+  },
+  {
+    "craftingTime": 6,
+    "description": "Increases defense by [color=white]{defense_potion_effect}%[/color] for {defense_potion_duration}sec. Max stacks: {defense_potion_max_stacks}",
+    "ingredients": [
+      { "name": "Corpus", "quantity": 2 },
+      { "name": "Spiritus", "quantity": 1 }
+    ],
+    "name": "Defense potion",
+    "stats": {}
+  },
+  {
+    "craftingTime": 6,
+    "description": "A trident of water swings towards the nearest enemy",
+    "ingredients": [{ "name": "Bubble", "quantity": 3 }],
+    "name": "Trident of Proteus",
+    "stats": {
+      "critChance": 0,
+      "critMult": 0,
+      "damage": 60,
+      "knockback": 1,
+      "type": 32
+    }
   }
 ]
