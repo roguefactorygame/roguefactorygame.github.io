@@ -4,13 +4,35 @@ import { BeltDecoration } from "../BeltDecoration";
 import { Cta } from "../Cta";
 import styles from "./PageContainer.module.css";
 import { TooltipContainer } from "../tooltip/TooltipContainer";
+import { PageBackground } from "./PageBackground";
 
 export default function PageContainer({ children }) {
   return (
     <TooltipContainer>
       <main className={styles.PageContainer}>
-        <BeltDecoration x={0} y="-25%" rotation="40deg" />
-        <BeltDecoration x="100%" y="calc(100vh - 70%)" rotation="40deg" />
+        <BeltDecoration
+          x="calc(100% - 24px)"
+          y="0"
+          rotation="0deg"
+          distance={2}
+        />
+        <BeltDecoration
+          x="calc(100% - 72px)"
+          y="0"
+          rotation="0deg"
+          distance={2}
+        />
+        <BeltDecoration
+          x="calc(100% - 48px)"
+          y="0"
+          rotation="0deg"
+          distance={0}
+        />
+        <PageBackground />
+        <BeltDecoration x="15%" y="-20%" rotation="40deg" distance={3} />
+        <BeltDecoration x="20%" y="-20%" rotation="40deg" distance={2} />
+        <BeltDecoration x="20%" y="-25%" rotation="40deg" />
+        {/* <BeltDecoration x="-5%" y="20%" rotation="-40deg" /> */}
         <img src={title} />
         <Cta />
         {children}

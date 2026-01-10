@@ -1,7 +1,17 @@
 .BeltDecoration {
   background-image: url("../../public/blue_belt_straight_full_arrows-6.png");
   background-repeat: repeat-y;
-  height: 100vh;
+  height: 150vh;
   width: 16px;
   position: fixed;
+  animation: belt-movement 2s linear 0s infinite forwards;
+}
+
+@keyframes belt-movement {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-16px);
+  }
 }

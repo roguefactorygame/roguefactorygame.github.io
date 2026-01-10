@@ -3,13 +3,14 @@
   overflow: hidden;
   border: 2px solid var(--rf-border-color);
   border-radius: 8px;
-  background-color: var(--rf-purple);
+  background-color: color(from var(--rf-purple) a98-rgb r g b / 75%);
   position: absolute;
   left: 0;
   top: 0;
   right: 0;
   bottom: 0;
   box-shadow: 0 2px 16px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(8px);
 }
 
 .RecipeGraphContainer {
