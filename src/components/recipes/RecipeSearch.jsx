@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./RecipeSearch.module.css";
+import cx from "classnames";
 import { RecipeGraphContext } from "./RecipeGraphContext";
 
 export const RecipeSearch = () => {
@@ -14,7 +15,10 @@ export const RecipeSearch = () => {
         onChange={(evt) => setSearchString(evt.target.value)}
       />
       <button
-        className={styles.RecipeSearchClear}
+        className={cx(
+          styles.RecipeSearchClear,
+          !!searchString && styles.RecipeSearchClearActive
+        )}
         onClick={() => setSearchString("")}
       />
     </div>

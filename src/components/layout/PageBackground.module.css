@@ -8,12 +8,13 @@
   background-repeat: repeat;
   z-index: -100;
   transform: rotate(-50deg);
-  opacity: 0.2;
+  opacity: 0.125;
   animation: bg-movement;
   animation-duration: 3.5s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
-  filter: blur(2px);
+  filter: blur(1px);
+  image-rendering: pixelated;
 }
 
 .PageBackgroundOverlay {

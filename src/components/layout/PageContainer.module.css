@@ -11,7 +11,9 @@
   display: flex;
   flex-direction: column;
   height: 100svh;
-  padding: var(--page-padding) var(--page-padding) calc(var(--page-padding) * 2 + var(--menu-font-size));
+  padding: var(--page-padding) var(--page-padding)
+    calc(var(--page-padding) * 2 + var(--menu-font-size));
+  padding-bottom: 0px !important;
 
   @media (width > 64rem) {
     padding: var(--page-padding);
@@ -28,7 +30,6 @@
   height: 6rem;
   object-fit: scale-down;
   margin-bottom: 8px;
-  animation: title-animation 1000ms ease-in-out 2000ms 1 forwards;
 }
 
 .PageContainer footer {

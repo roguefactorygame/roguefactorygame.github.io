@@ -4,13 +4,20 @@
   border: 2px solid var(--rf-border-color);
   border-radius: 8px;
   background-color: color(from var(--rf-purple) a98-rgb r g b / 75%);
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(8px);
+  z-index: 1;
+  position: relative;
+}
+
+.RecipeGraphWrapper {
   position: absolute;
   left: 0;
   top: 0;
   right: 0;
   bottom: 0;
-  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(8px);
+  flex-grow: 1;
+  display: flex;
 }
 
 .RecipeGraphContainer {
@@ -109,4 +116,46 @@
     from var(--rf-purple-grey) h s calc(l - 25)
   );
   --pico-primary-hover: hsl(from var(--rf-purple-grey) h s calc(l - 25));
+}
+
+.RecipeGraphBorder {
+  backdrop-filter: blur(16px) saturate(200%) contrast(200%) brightness(200%);
+  background-color: color(from var(--rf-border-color) a98-rgb r g b / 75%);
+  mix-blend-mode: hard-light;
+}
+
+.RecipeGraphBorderLeft {
+  position: absolute;
+  left: -4px;
+  top: -4px;
+  bottom: -4px;
+  width: 8px;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+.RecipeGraphBorderRight {
+  position: absolute;
+  right: -4px;
+  top: -4px;
+  bottom: -4px;
+  width: 8px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.RecipeGraphBorderTop {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -4px;
+  height: 8px;
+}
+
+.RecipeGraphBorderBottom {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -4px;
+  height: 8px;
 }

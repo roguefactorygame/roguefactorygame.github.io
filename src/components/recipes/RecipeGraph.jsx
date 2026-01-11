@@ -126,117 +126,137 @@ export default function RecipeGraph({ onHover, ...props }) {
 
   return (
     <RecipeGraphContext value={{ searchString, setSearchString }}>
-      <div {...props} className={styles.RecipeGraph}>
-        <div ref={setElement} onWheel={onWheel}>
-          <Mermaid
-            definition={mermaid}
-            onClick={onClick}
-            onMouseOut={onMouseOut}
-            onMouseOver={onMouseOver}
-            selection={selectedRecipeName}
-            highlight={[
-              ...(products || []),
-              ...(ingredientChain || []),
-              ...(searchMatches || []),
-            ]}
-          />
-        </div>
-        <aside
+      <div className={styles.RecipeGraphWrapper}>
+        <div
+          className={cx(styles.RecipeGraphBorder, styles.RecipeGraphBorderLeft)}
+        />
+        <div
           className={cx(
-            styles.RecipeGraphInfo,
-            recipe && styles.RecipeGraphInfoWithContent
+            styles.RecipeGraphBorder,
+            styles.RecipeGraphBorderRight
           )}
-        >
-          {recipe && (
-            <>
-              <button
-                className={styles.RecipeGraphInfoClose}
-                onClick={() => setSelectedRecipeName(null)}
-              />
-              <header style={getColorStyle(selectedRecipeName)}>
-                {selectedRecipeName}
-              </header>
-              <section>
-                Made in{" "}
-                <span className={styles.AssemblerType}>
-                  Assembler {"I".repeat(ingredientCount)}
-                </span>
-              </section>
-              <section>{description}</section>
-              <header style={{ opacity: 0.5 }}>Ingredients:</header>
-              <section>
-                <ul>
-                  {recipe.ingredients.map((ingredient) => (
-                    <li key={ingredient.name}>
-                      -{" "}
-                      <a
-                        onClick={() => onClick(ingredient.name)}
-                        onMouseOver={() => onMouseOver(ingredient.name)}
-                        onMouseOut={onMouseOut}
-                        style={getColorStyle(ingredient.name)}
-                      >
-                        {ingredient.name}
-                      </a>{" "}
-                      {ingredient.quantity > 1
-                        ? ` x ${ingredient.quantity}`
-                        : ""}
-                    </li>
-                  ))}
-                </ul>
-              </section>
-              {products && (
-                <>
-                  <header style={{ opacity: 0.5 }}>Used in:</header>
-                  <section>
-                    <ul>
-                      {products.map((product) => (
-                        <li key={product}>
-                          -{" "}
-                          <a
-                            onClick={() => onClick(product)}
-                            onMouseOver={() => onMouseOver(product)}
-                            onMouseOut={onMouseOut}
-                            style={getColorStyle(product)}
-                          >
-                            {product}
-                          </a>
-                        </li>
-                      ))}
-                    </ul>
-                  </section>
-                </>
-              )}
-              {hasStats && (
-                <>
-                  <header style={{ opacity: 0.5 }}>Stats:</header>
-                  <section>
-                    <ul>
-                      {recipe.stats.damage > 0.5 && (
-                        <li>
-                          - {recipe.stats.damage}{" "}
-                          {ElementalType[recipe.stats.type]} damage
-                        </li>
-                      )}
-                      {recipe.stats.knockback > 0.01 && (
-                        <li>- {recipe.stats.knockback} knockback</li>
-                      )}
-                      {recipe.stats.critMult > 1 && (
-                        <li>- {recipe.stats.critMult}x crit damage</li>
-                      )}
-                      {recipe.stats.critChance > 0.05 && (
-                        <li>
-                          - {Math.round(recipe.stats.critChance * 100)}% crit
-                          chance
-                        </li>
-                      )}
-                    </ul>
-                  </section>
-                </>
-              )}
-            </>
+        />
+        <div
+          className={cx(styles.RecipeGraphBorder, styles.RecipeGraphBorderTop)}
+        />
+        <div
+          className={cx(
+            styles.RecipeGraphBorder,
+            styles.RecipeGraphBorderBottom
           )}
-        </aside>
-        <RecipeSearch />
+        />
+        <div {...props} className={styles.RecipeGraph}>
+          <div ref={setElement} onWheel={onWheel}>
+            <Mermaid
+              definition={mermaid}
+              onClick={onClick}
+              onMouseOut={onMouseOut}
+              onMouseOver={onMouseOver}
+              selection={selectedRecipeName}
+              highlight={[
+                ...(products || []),
+                ...(ingredientChain || []),
+                ...(searchMatches || []),
+              ]}
+            />
+          </div>
+          <aside
+            className={cx(
+              styles.RecipeGraphInfo,
+              recipe && styles.RecipeGraphInfoWithContent
+            )}
+          >
+            {recipe && (
+              <>
+                <button
+                  className={styles.RecipeGraphInfoClose}
+                  onClick={() => setSelectedRecipeName(null)}
+                />
+                <header style={getColorStyle(selectedRecipeName)}>
+                  {selectedRecipeName}
+                </header>
+                <section>
+                  Made in{" "}
+                  <span className={styles.AssemblerType}>
+                    Assembler {"I".repeat(ingredientCount)}
+                  </span>
+                </section>
+                <section>{description}</section>
+                <header style={{ opacity: 0.5 }}>Ingredients:</header>
+                <section>
+                  <ul>
+                    {recipe.ingredients.map((ingredient) => (
+                      <li key={ingredient.name}>
+                        -{" "}
+                        <a
+                          onClick={() => onClick(ingredient.name)}
+                          onMouseOver={() => onMouseOver(ingredient.name)}
+                          onMouseOut={onMouseOut}
+                          style={getColorStyle(ingredient.name)}
+                        >
+                          {ingredient.name}
+                        </a>{" "}
+                        {ingredient.quantity > 1
+                          ? ` x ${ingredient.quantity}`
+                          : ""}
+                      </li>
+                    ))}
+                  </ul>
+                </section>
+                {products && (
+                  <>
+                    <header style={{ opacity: 0.5 }}>Used in:</header>
+                    <section>
+                      <ul>
+                        {products.map((product) => (
+                          <li key={product}>
+                            -{" "}
+                            <a
+                              onClick={() => onClick(product)}
+                              onMouseOver={() => onMouseOver(product)}
+                              onMouseOut={onMouseOut}
+                              style={getColorStyle(product)}
+                            >
+                              {product}
+                            </a>
+                          </li>
+                        ))}
+                      </ul>
+                    </section>
+                  </>
+                )}
+                {hasStats && (
+                  <>
+                    <header style={{ opacity: 0.5 }}>Stats:</header>
+                    <section>
+                      <ul>
+                        {recipe.stats.damage > 0.5 && (
+                          <li>
+                            - {recipe.stats.damage}{" "}
+                            {ElementalType[recipe.stats.type]} damage
+                          </li>
+                        )}
+                        {recipe.stats.knockback > 0.01 && (
+                          <li>- {recipe.stats.knockback} knockback</li>
+                        )}
+                        {recipe.stats.critMult > 1 && (
+                          <li>- {recipe.stats.critMult}x crit damage</li>
+                        )}
+                        {recipe.stats.critChance > 0.05 && (
+                          <li>
+                            - {Math.round(recipe.stats.critChance * 100)}% crit
+                            chance
+                          </li>
+                        )}
+                      </ul>
+                    </section>
+                  </>
+                )}
+              </>
+            )}
+          </aside>
+          <RecipeSearch />
+        </div>
       </div>
     </RecipeGraphContext>
   );

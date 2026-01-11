@@ -11,6 +11,12 @@ export default function PageContainer({ children }) {
     <TooltipContainer>
       <main className={styles.PageContainer}>
         <BeltDecoration
+          x="100vw"
+          y="calc(100vh - 32px)"
+          rotation="90deg"
+          distance={3}
+        />
+        <BeltDecoration
           x="calc(100% - 24px)"
           y="0"
           rotation="0deg"
