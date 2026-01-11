@@ -12,8 +12,8 @@
   background: var(--rf-purple);
   background: linear-gradient(
     180deg,
-    hsl(from var(--rf-purple) h s calc(l * .4) / 0) 0%,
-    hsl(from var(--rf-purple) h s calc(l * .4)) 100%
+    hsl(from var(--rf-purple) h s calc(l * 0.4) / 0) 0%,
+    hsl(from var(--rf-purple) h s calc(l * 0.4)) 100%
   );
 
   @media (width > 64rem) {
@@ -26,4 +26,13 @@
   line-height: 1;
   min-width: max-content;
   font-size: inherit;
+}
+
+.Navigation a {
+  transition: filter 0.25s ease-out;
+}
+
+.Navigation a:hover {
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5))
+    drop-shadow(0 15px 30px #d1580288) drop-shadow(0 -25px 30px #ffd96e55);
 }

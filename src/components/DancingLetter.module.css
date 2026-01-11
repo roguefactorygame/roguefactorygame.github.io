@@ -1,0 +1,15 @@
+.DancingLetter {
+  display: inline-block;
+  animation: dancing-letter 1s ease-in-out 0s infinite alternate;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5),
+    -2px -2px 4px rgba(255, 255, 255, 0.5);
+}
+
+@keyframes dancing-letter {
+  0% {
+    transform: translateY(-4px);
+  }
+  100% {
+    transform: translateY(4px);
+  }
+}

@@ -118,7 +118,7 @@
 }
 
 .RecipeGraphBorder {
-  backdrop-filter: blur(16px) saturate(200%) contrast(200%) brightness(200%);
+  backdrop-filter: blur(16px) saturate(150%) contrast(150%) brightness(200%);
   background-color: color(from var(--rf-border-color) a98-rgb r g b / 75%);
   mix-blend-mode: hard-light;
 }

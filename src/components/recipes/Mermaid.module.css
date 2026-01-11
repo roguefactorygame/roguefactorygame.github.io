@@ -1,8 +1,12 @@
 .MermaidContainer {
-    opacity: 0;
-    transition: opacity 2s ease-in;
+  opacity: 0;
+  transition: opacity 2s ease-in;
 }
 
 .MermaidContainerLoaded {
-    opacity: 1 !important;
+  opacity: 1 !important;
+}
+
+.MermaidContainer path {
+  stroke: rgba(255, 255, 255, 0.5) !important;
 }

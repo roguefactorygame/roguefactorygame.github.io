@@ -190,7 +190,8 @@ a.button-primary {
   font-family: "ButtonFont";
   text-transform: lowercase;
   white-space: nowrap;
-  transition: transform 25ms ease-out;
+  transition: transform 25ms ease-out, box-shadow 25ms ease-out;
+  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.5);
 }
 
 a.button-primary:hover {
@@ -203,6 +204,7 @@ a.button-primary:hover {
   text-decoration: none !important;
   font-family: "ButtonFont";
   transform: scale3d(110%, 110%, 110%);
+  box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.5);
 }
 
 article {

@@ -5,6 +5,7 @@ import { Cta } from "../Cta";
 import styles from "./PageContainer.module.css";
 import { TooltipContainer } from "../tooltip/TooltipContainer";
 import { PageBackground } from "./PageBackground";
+import { CrtEffect } from "./CrtEffect";
 
 export default function PageContainer({ children }) {
   return (
@@ -35,6 +36,7 @@ export default function PageContainer({ children }) {
           distance={0}
         />
         <PageBackground />
+        <CrtEffect />
         <BeltDecoration x="15%" y="-20%" rotation="40deg" distance={3} />
         <BeltDecoration x="20%" y="-20%" rotation="40deg" distance={2} />
         <BeltDecoration x="20%" y="-25%" rotation="40deg" />

@@ -8,12 +8,11 @@
   background-repeat: repeat;
   z-index: -100;
   transform: rotate(-50deg);
-  opacity: 0.125;
+  opacity: 0.075;
   animation: bg-movement;
-  animation-duration: 3.5s;
+  animation-duration: 7s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
-  filter: blur(1px);
   image-rendering: pixelated;
 }
 
@@ -33,6 +32,6 @@
     transform: rotate(-50deg) translateX(0);
   }
   100% {
-    transform: rotate(-50deg) translateX(-32px);
+    transform: rotate(-50deg) translateX(-64px);
   }
 }
