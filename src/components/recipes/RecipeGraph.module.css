@@ -2,11 +2,16 @@
   flex-grow: 1;
   overflow: hidden;
   border-radius: 8px;
-  background-color: color(from var(--rf-purple) a98-rgb r g b / 75%);
-  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.2);
+  border: none;
+  /* background-color: color(from var(--rf-purple) a98-rgb r g b / 25%); */
+  background-color: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.5),
+    0 -2px 4px rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(8px);
   z-index: 1;
   position: relative;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 4px solid rgba(0, 0, 0, 0.5);
 }
 
 .RecipeGraphWrapper {
@@ -118,9 +123,10 @@
 }
 
 .RecipeGraphBorder {
-  backdrop-filter: blur(16px) saturate(150%) contrast(150%) brightness(200%);
+  backdrop-filter: blur(16px) saturate(100%) contrast(90%) brightness(150%);
   background-color: color(from var(--rf-border-color) a98-rgb r g b / 75%);
   mix-blend-mode: hard-light;
+  display: none;
 }
 
 .RecipeGraphBorderLeft {
@@ -128,9 +134,9 @@
   left: -4px;
   top: -4px;
   bottom: -4px;
-  width: 8px;
-  border-top-left-radius: 8px;
-  border-bottom-left-radius: 8px;
+  width: 16px;
+  border-top-left-radius: 32px;
+  border-bottom-left-radius: 32px;
 }
 
 .RecipeGraphBorderRight {
@@ -138,9 +144,9 @@
   right: -4px;
   top: -4px;
   bottom: -4px;
-  width: 8px;
-  border-top-right-radius: 8px;
-  border-bottom-right-radius: 8px;
+  width: 16px;
+  border-top-right-radius: 32px;
+  border-bottom-right-radius: 32px;
 }
 
 .RecipeGraphBorderTop {
@@ -148,7 +154,9 @@
   left: 0;
   right: 0;
   top: -4px;
-  height: 8px;
+  height: 16px;
+  border-top-left-radius: 32px;
+  border-top-right-radius: 32px;
 }
 
 .RecipeGraphBorderBottom {
@@ -156,5 +164,7 @@
   left: 0;
   right: 0;
   bottom: -4px;
-  height: 8px;
+  height: 16px;
+  border-bottom-right-radius: 32px;
+  border-bottom-left-radius: 32px;
 }

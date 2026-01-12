@@ -31,7 +31,8 @@
   object-fit: scale-down;
   margin-bottom: 8px;
   filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5))
-    drop-shadow(0 15px 30px #d1580288) drop-shadow(0 -25px 30px #ffd96e55);
+    drop-shadow(0 15px 30px #d1580288) drop-shadow(0 -25px 30px #ffd96e55)
+    drop-shadow(0 0 120px #ffffff44);
 }
 
 .PageContainer footer {

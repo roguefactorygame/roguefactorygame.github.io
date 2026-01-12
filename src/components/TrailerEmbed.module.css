@@ -1,0 +1,26 @@
+.TrailerEmbed {
+  border-radius: 16px;
+  position: relative;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 4px solid rgba(0, 0, 0, 0.5);
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.5),
+    0 -2px 4px rgba(255, 255, 255, 0.05);
+}
+
+.TrailerEmbed::before {
+  z-index: -1;
+  content: "";
+  left: -100vw;
+  right: -100vw;
+  top: -10px;
+  bottom: -10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(8px);
+  position: absolute;
+  display: block;
+}
+
+.TrailerEmbedContent {
+  overflow: hidden;
+  border-radius: 16px;
+}
