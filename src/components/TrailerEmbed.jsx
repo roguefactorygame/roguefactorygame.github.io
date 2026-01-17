@@ -14,7 +14,6 @@ export const TrailerEmbed = () => {
           referrerpolicy="strict-origin-when-cross-origin"
           allowfullscreen
           style={{
-            width: "50vw",
             aspectRatio: "560/315",
           }}
         />
